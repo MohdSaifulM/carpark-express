@@ -1,0 +1,16 @@
+<h3 class="font-weight-bold text-center">Carparks</h3>
+
+
+<div class="row">
+    <% carpark.forEach (el => { %>
+    <div class="card col-3 mx-1 my-1" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title"><%= el.name %></h5>
+            <h6 class="card-subtitle mb-2 text-muted"><%= el.location %></h6>
+            <p class="card-text">Lots available: <%= el.maxCapacity %></p>
+            <a href="/show/<%= el._id %>" class="card-link">Show</a>
+            <a href="#" class="card-link">Delete</a>
+        </div>
+    </div>
+    <%})%>
+</div>
